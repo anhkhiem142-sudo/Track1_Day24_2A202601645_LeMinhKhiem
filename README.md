@@ -5,6 +5,27 @@
 
 ---
 
+## 👤 Thông Tin Nộp Bài
+
+- **Họ và tên:** Lê Minh Khiêm *(vui lòng kiểm tra lại chính tả/dấu trước khi nộp)*
+- **MSSV:** 2A202601645
+- **Dự án Day 16-17:** P-085 — AI Agent Phân tích Hủy chuyến và Hỗ trợ Giữ chân Khách hàng (ride-hailing retention)
+
+## 🎯 Phase 0 — Pricing Model (Gate 0)
+
+**Sản phẩm:** AI Agent Phân tích Hủy chuyến và Hỗ trợ Giữ chân Khách hàng (P-085) — bán dưới dạng B2B SaaS cho các nền tảng ride-hailing/mobility tại Việt Nam. Người mua là bộ phận Retention/CRM Marketing của doanh nghiệp (không phải end-customer đi xe).
+
+**Mô hình: Hybrid Pricing** (đơn vị tính = 1 doanh nghiệp khách hàng):
+
+| Thành phần | Cơ chế |
+|---|---|
+| **Phí nền tảng cố định** | Theo tier quy mô khách hàng active mà doanh nghiệp đang quản lý (Starter / Growth / Enterprise), thu hàng tháng, kèm hạn mức scoring miễn phí. |
+| **Phí usage** | Theo số lượng end-customer được chạy qua risk-scoring pipeline mỗi tháng, vượt hạn mức tier. |
+
+ARPU trong Tab 1 Excel là con số **blended** (nền tảng cố định + usage trung bình) cho một doanh nghiệp khách hàng, vì mô hình Excel chỉ hỗ trợ một biến ARPU duy nhất cho mỗi kịch bản.
+
+---
+
 ## 🎯 1. Tiêu Đề & Mục Tiêu Tổng Quan (Header & Objectives)
 
 ### Mục Tiêu Đầu Ra (Outcomes & Objectives):
@@ -40,7 +61,7 @@ cd Day24-Track1-AI-Product-Financial-Model-Lab
 ```text
 Day24-Track1-AI-Product-Financial-Model-Lab/
 ├── README.md                              # ★ BẠN VIẾT DECISION NOTE & GHI THÔNG TIN BÀI NỘP
-├── Day24-AI-Product-Finance-Model.xlsx    # ★ BẠN IMPLEMENT (Điền giả định 3-Tab Excel)
+├── 2A202601645_LeMinhKhiem_Day24.xlsx      # ★ BẠN IMPLEMENT (Điền giả định 3-Tab Excel)
 ├── Day24-AI-Product-Handbook.pdf          # Tài liệu Handbook tra cứu Benchmark tài chính AI
 ├── .gitignore                             # Cấu hình ẩn file tạm & dotfiles hệ thống
 └── slides/                                # THƯ MỤC SLIDE DECK TƯƠNG TÁC (90 PHÚT)
@@ -109,6 +130,18 @@ Track1-Day24-MHV-[MSSV]-[HoVaTen]/
 ├── README.md               # Họ tên, MSSV, Tên nhóm Day 16-17 & Decision Note
 └── [MSSV]_[HoVaTen]_Day24.xlsx # File Excel tài chính 3 Tabs đã hoàn thành
 ```
+
+## 📝 Decision Note (200–300 từ)
+
+Chúng tôi định giá P-085 theo mô hình Hybrid: phí nền tảng cố định theo tier quy mô khách hàng (số rider đang quản lý) cộng phí usage theo số end-customer được scoring mỗi tháng, gộp thành ARPU bình quân 35 triệu VNĐ/khách/tháng ở kịch bản Base. Mức này được neo theo logic: khách hàng của chúng tôi là các nền tảng ride-hailing/mobility tại Việt Nam có ngân sách Retention/CRM Marketing riêng; 35 triệu/tháng (~420 triệu/năm) chỉ là một phần nhỏ ngân sách retention của một doanh nghiệp vận hành hàng chục nghìn tài xế/khách, nên đủ thấp để không bị từ chối ngay ở vòng đàm phán nhưng đủ cao để đạt Gross Margin 54,3% — đúng target AI product 40-60% (Handbook §2.3).
+
+CAC 70 triệu VNĐ/khách phản ánh chi phí bán hàng enterprise B2B thực tế — không chỉ ads mà gồm cả thời gian sales/PM chạy demo, POC và đàm phán hợp đồng kéo dài nhiều tháng với một tài khoản lớn, đúng lưu ý của Handbook rằng "đa số startup tính sót lương sales team". Với TAM chỉ 35 doanh nghiệp tại Việt Nam (ước tính top-down từ số nền tảng ride-hailing/mobility đang hoạt động — Grab, Be, Xanh SM, Mai Linh Bike, các đơn vị khu vực/nhượng quyền...), tốc độ chốt ~1 khách/tháng và churn 1,5%/tháng (đúng benchmark B2B <2%), LTV/CAC đạt 18,1x — cao hơn trung vị SaaS 4,2:1 vì đặc thù sales-led: ít khách nhưng giá trị hợp đồng lớn và độ dính cao (chi phí chuyển đổi cao do tích hợp sâu vào vận hành).
+
+Plan B nếu Pessimistic xảy ra (không chốt được deal nào trong 24 tháng, CAC tăng 1,5x lên 105 triệu, churn tăng gấp đôi lên 3%/tháng): Runway vẫn đạt 19 tháng nhờ vốn ban đầu 1 tỷ VNĐ được giữ thận trọng và đội ngũ thu gọn còn 2 người, đủ thời gian pivot sang mức giá thấp hơn, tìm kênh referral rẻ hơn, hoặc mở rộng sang thị trường Đông Nam Á trước khi cạn tiền.
+
+*(Lưu ý: các con số trên là bản nháp dựa trên benchmark Handbook + suy luận top-down của AI hỗ trợ — nhóm cần review, đối chiếu với dữ liệu thực tế của P-085 và điều chỉnh lại nếu cần trước khi nộp, theo đúng AI Ethics Policy của bài.)*
+
+---
 
 ### Pre-submission Checklist (Rà soát 6 bước trước khi nộp):
 - [ ] 1. Khai báo rõ Họ tên, MSSV và Tên dự án nhóm Day 16-17 trong `README.md`.
